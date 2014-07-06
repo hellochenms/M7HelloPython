@@ -9,12 +9,12 @@ import cPickle as p
 list = [0, '1', {'key0':'value0', 'key1':'value1'}, ('0', 1)]
 path = 'file_dump_load'
 
-# dump
+# 保存
 f = file(path, 'w')
 p.dump(list, f)
 f.close()
     
-# load
+# 加载
 f = file(path, 'r')
 list = p.load(f)
 print list
