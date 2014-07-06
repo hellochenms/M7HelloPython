@@ -40,6 +40,7 @@ f = file(destPath, 'r')
 lines = f.readlines()
 print '\nlines:'
 for line in lines:
-    print line.strip() 
+    # 读到的line中有换行符，所以我们print时加上逗号，避免print的自动换行
+    print line,
 f.close()
 
