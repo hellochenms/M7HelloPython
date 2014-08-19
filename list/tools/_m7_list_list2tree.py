@@ -1,4 +1,4 @@
-#!/usr/bin/python
+!/usr/bin/python
 # -*- coding:utf-8 -*- 
 
 ### list2tree.py
@@ -11,19 +11,19 @@ srcJsonPath = './_m7_list_list2tree.txt'
 srcJsonString = file(srcJsonPath, 'r').read()
 srcList = json.loads(srcJsonString)
 destList = []
-# ¸¨Öúdict£¬¼ÇÂ¼ÒÑ¾­ÔÚdestListÄ³²ã¼¶µÄitem
+# è¾…åŠ©dictï¼Œè®°å½•å·²ç»åœ¨destListæŸå±‚çº§çš„item
 destDict = {}
-# ¸¨Öúlist£¬¼ÇÂ¼½«±¾´Îµü´ú½«´ÓsrcListÖĞÉ¾³ıitem
+# è¾…åŠ©listï¼Œè®°å½•å°†æœ¬æ¬¡è¿­ä»£å°†ä»srcListä¸­åˆ é™¤item
 deleteList = []
 
-# ·´¸´µü´ú£¬Ö±µ½·ûºÏÖÕÖ¹Ìõ¼ş
+# åå¤è¿­ä»£ï¼Œç›´åˆ°ç¬¦åˆç»ˆæ­¢æ¡ä»¶
 isEnd = False
 lastSrcListLength = len(srcList)
 while (isEnd == False):
-    # Ò»´Îµü´ú
+    # ä¸€æ¬¡è¿­ä»£
     deleteList = []
     for item in srcList:    
-        # Èç¹ûitemµÄPIDÎª0£¬»òÆäPID¶ÔÓ¦µÄitemÒÑ¾­ÔÚdestDicÖĞ£¬Ôò½«itemÖÃÈëdestListµÄºÏÊÊÎ»ÖÃ
+        # å¦‚æœitemçš„PIDä¸º0ï¼Œæˆ–å…¶PIDå¯¹åº”çš„itemå·²ç»åœ¨destDicä¸­ï¼Œåˆ™å°†itemç½®å…¥destListçš„åˆé€‚ä½ç½®
         if item['PID'] == 0:
             item['sublist'] = []
             destList.append(item)
